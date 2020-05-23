@@ -9,11 +9,12 @@ import Chart from './components/Chart';
 import Footer from './components/Footer';
 
 
+
 function App() {
   return (
     <React.Fragment>
       <Header/>
-      <Card />
+       <Card />
      {/* <Switch>
         <Route path="/Assignment Progress" component={Chart} />
      </Switch>*/}

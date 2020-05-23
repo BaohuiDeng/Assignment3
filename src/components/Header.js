@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,Link
+} from "react-router-dom";
 import person from '../person.png';
 import socoLogo from '../socoLogo.png';
 import Chart from './Chart';
-import {Switch,Route} from 'react-router-dom';
+import AssignmentsChart from './AssignmentsChart';
 
 
 
@@ -23,13 +27,23 @@ export default class Header extends Component {
         <div className="collapse navbar-collapse align-middle" id="navCollapse">
           <ul className="navbar-nav ml-auto">
 			<li className="nav-item mt-1">
+      <Link to="/Myassignment">
+
       <h6 id="myassignment" className="text-muted mt-3 mx-2">   Assignment Progress </h6>
-            
+      </Link> 
+
             </li>
 			<li className="nav-item mt-1">
-               <h6 id="myresource" className="text-muted mt-3 mx-2"> Resources Usage</h6>
-              
+        <Link to="resources">
+                <h6 id="myresource" className="text-muted mt-3 mx-2"> Resources Usage</h6>
+                </Link>
             </li>
+            <Switch>
+              <Route exact path="/Myassignment">
+              
+
+              </Route>
+            </Switch>
 			<li className="nav-item dropdown ml-4">
               <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
                 <span>User</span>
